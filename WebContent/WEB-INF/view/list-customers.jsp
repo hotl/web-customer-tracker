@@ -6,8 +6,7 @@
 		<title>Customer List Page</title>
 		<link type="text/css"
 			rel="stylesheet"
-			href="${pageContext.request.contextPath}/resources/css/style.css"
-			href="${pageContext.request.contextPath}/resources/css/add-customer-style.css"/>
+			href="${pageContext.request.contextPath}/resources/css/style.css"/>
 	</head>
 	
 	<body>
@@ -17,6 +16,10 @@
 			</div>
 			<div id="container">
 				<div id="content">
+				
+				<!-- Add Customer Button -->
+				<input type="button" value="Add Customer" 
+				onClick="window.location.href='showFormForAdd'; 'return false';" class="add-button"/>
 					<table>
 						<tr>
 							<th>First Name</th>
