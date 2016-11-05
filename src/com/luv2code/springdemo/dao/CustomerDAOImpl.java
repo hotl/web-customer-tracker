@@ -31,4 +31,12 @@ public class CustomerDAOImpl implements CustomerDAO {
 		session.flush();
 	}
 
+	@Override
+	public Customer getCustomer(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		Query<Customer> query = session.createQuery("from Customer c where c.id = " + id, Customer.class);
+		Customer customer = query.getSingleResult();
+		return customer;
+	}
+
 }
